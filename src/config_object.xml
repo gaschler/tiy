@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opencv_storage>
+<!-- Marker Template Configuration -->
+   <num_templates>2.000000 </num_templates>
+   <Template_1 type_id="opencv-matrix">
+      <rows>4</rows>
+      <cols>7</cols>
+      <dt>f</dt>
+      <data>0.000000 -297.424851 -57.791320 147.544350 -1076.382752 -733.077616 -1053.606152 0.000000 0.000000 266.144764 348.847229 748.977051 1027.083532 995.443540 0.000000 0.000000 0.000000 -3.971397 7.217148 4.697730 6.808080 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 </data>
+   </Template_1>
+   <Template_2 type_id="opencv-matrix">
+      <rows>4</rows>
+      <cols>4</cols>
+      <dt>f</dt>
+      <data>0.000000 83.631960 64.749091 159.435735 0.000000 0.000000 117.539659 -31.714488 0.000000 0.000000 0.000000 -52.235246 1.000000 1.000000 1.000000 1.000000 </data>
+   </Template_2>
+<!-- Transformation: Virtual Point (e.g. Peak of Poiner) -> KoSy of i. Template [mm] -->
+   <RT_virt_point_to_template_2 type_id="opencv-matrix">
+      <rows>4</rows>
+      <cols>4</cols>
+      <dt>f</dt>
+      <data>1.000000 0.000000 0.000000 -18.614388 0.000000 1.000000 0.000000 57.385975 0.000000 0.000000 1.000000 79.150004 0.000000 0.000000 0.000000 1.000000 </data>
+   </RT_virt_point_to_template_2>
+</opencv_storage>

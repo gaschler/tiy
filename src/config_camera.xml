@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opencv_storage>
+<!-- Camera Configuration -->
+   <left_camera_id>"Basler-21050001"</left_camera_id>
+   <right_camera_id>"Basler-21047766"</right_camera_id>
+   <frame_rate>20</frame_rate>
+   <exposure>10000</exposure>
+   <gain>300</gain>
+   <frame_width>1280</frame_width>
+   <frame_height>964</frame_height>
+<!-- Camera Processing Configuration -->
+   <min_segmentation_area>0.000500</min_segmentation_area>
+   <max_segmentation_area>0.010000</max_segmentation_area>
+<!-- Camera Calibration Configuration -->
+   <T type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>1</cols>
+      <dt>f</dt>
+      <data>-1446.945887 -1682.345297 1934.225583 </data>
+   </T>
+   <om type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>1</cols>
+      <dt>f</dt>
+      <data>-0.039673 1.546619 1.425703 </data>
+   </om>
+   <RT type_id="opencv-matrix">
+      <rows>4</rows>
+      <cols>4</cols>
+      <dt>f</dt>
+      <data>-0.507639 -0.604544 0.613864 -1446.945887 0.562730 0.306875 0.767570 -1682.345297 -0.652409 0.735088 0.184413 1934.225583 0.000000 0.000000 0.000000 1.000000 </data>
+   </RT>
+   <KK_left type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>3</cols>
+      <dt>f</dt>
+      <data>1635.457876 0.000000 615.205273 0.000000 1634.322263 498.643219 0.000000 0.000000 1.000000 </data>
+   </KK_left>
+   <KK_right type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>3</cols>
+      <dt>f</dt>
+      <data>1632.377215 0.000000 659.313310 0.000000 1631.333754 524.301562 0.000000 0.000000 1.000000 </data>
+   </KK_right>
+   <kc_left type_id="opencv-matrix">
+      <rows>5</rows>
+      <cols>1</cols>
+      <dt>f</dt>
+      <data>-0.169694 0.156776 -0.001928 -0.001301 0.000000 </data>
+   </kc_left>
+   <kc_right type_id="opencv-matrix">
+      <rows>5</rows>
+      <cols>1</cols>
+      <dt>f</dt>
+      <data>-0.182964 0.205343 0.001418 0.000557 0.000000 </data>
+   </kc_right>
+   <F type_id="opencv-matrix">
+      <rows>3</rows>
+      <cols>3</cols>
+      <dt>f</dt>
+      <data>0.000003 -0.000686 -0.759577 -0.000722 -0.000040 1.355265 -0.643845 -0.420900 785.663080 </data>
+   </F>
+   <RT_leftcam_to_calib_pattern type_id="opencv-matrix">
+      <rows>4</rows>
+      <cols>4</cols>
+      <dt>f</dt>
+      <data>0.854631 0.363822 -0.370459 553.638885 0.519227 -0.594404 0.614076 -1376.938913 0.003212 -0.717160 -0.696901 1300.061264 0.000000 0.000000 0.000000 1.000000 </data>
+   </RT_leftcam_to_calib_pattern>
+</opencv_storage>

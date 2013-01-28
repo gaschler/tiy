@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opencv_storage>
+
+<!-- NETWORK CONFIGURATION (Multicast) -->
+	<multicast_port>30000</multicast_port><!-- short int (< 32768) -->
+	<multicast_adress>"239.255.0.1"</multicast_adress><!-- IP6: ff31::8000:1234 -->
+	<listen_address>"0.0.0.0"</listen_address><!-- IP6: 0::0 -->
+	<client_update_intervall_ms>1</client_update_intervall_ms>
+	
+<!-- STEREO DATA INPUT -->
+	<!-- Source (b: Basler Camera, o: OpenCV Camera, v: Video files, t: 2D point files) -->
+	    <input_src>v</input_src>
+    <!-- Video Source -->
+		<video_left>"video_left.avi"</video_left>
+		<video_right>"video_right.avi"</video_right>
+	<!-- Points 2D Source -->
+		<points_2D_left>"points_2D_left.dat"</points_2D_left>
+		<points_2D_right>"points_2D_right.dat"</points_2D_right>
+	
+<!-- USER INPUT -->
+	<!-- Source (m: Mouse, k: Keyboard) -->
+	    <input_device_src>k</input_device_src>
+	<!-- Device (LINUX: event file (e.g. "/dev/input/genius-event"),
+				 WIN: hardware id (format: "VID_xxxxPID_xxxx", e.g. "VID_046DPID_C52B", NO special characters like "&")
+				 (keyboard_id only necessary for LINUX; in WIN all keyboards automatically detected) -->
+		<mouse_device_id>"/dev/input/genius-event"</mouse_device_id>
+		<keyboard_device_id>"/dev/input/dell-keyboard-event"</keyboard_device_id>
+				
+<!-- OUTPUT --> 
+	<!-- Output mode: output only when input action (1) / automatically output at every cycle (0) -->
+		<do_interactive_mode>0</do_interactive_mode>
+	<!-- Graphics -->
+		<do_show_graphics>1</do_show_graphics>
+	<!-- Print -->
+		<!-- Formats are the same as in the log-files -->
+		<do_output_debug>0</do_output_debug>
+		<do_output_2D>0</do_output_2D>
+		<do_output_3D>0</do_output_3D>
+		<do_output_object>1</do_output_object> 
+		<do_output_virt_point>0</do_output_virt_point> 
+	<!-- Log (files located in the "tiy_log" subdirectory of the tiy bin folder (Windows) or of the home directory (Linux)) -->
+		<!-- Points -->
+			<do_log_2D>0</do_log_2D> <!-- x-y-pixel position of the detected markers on the camera frames -->
+			<log_points_2D_left>"log_points_2D_left.dat"</log_points_2D_left> <!-- FORMAT (linewise): "timestamp[TAB]x(0)[TAB]y(0)[TAB]x(1)[TAB]y(1)..." -->
+			<log_points_2D_right>"log_points_2D_right.dat"</log_points_2D_right> <!-- FORMAT (linewise): "timestamp[TAB]x(0)[TAB]y(0)[TAB]x(1)[TAB]y(1)..." -->
+			<do_log_3D>0</do_log_3D> <!-- x-y-z-position in [mm] from the left camera KOSY to the detected markers -->
+			<log_points_3D>"log_points_3D.dat"</log_points_3D> <!-- FORMAT (linewise): "timestamp[TAB]x(0)[TAB]y(0)[TAB]z(0)[TAB]x(1)[TAB]y(1)[TAB]z(1)..." -->
+		<!-- Objects -->
+			<do_log_object>1</do_log_object> <!-- Transformation from the object KOSYs to the left camera (= x-y-z position of the objects "first" marker in the left camera KOSY in [mm] AND orientation as 3-D rodrigues vector (see cv::Rodrigues()) -->
+			<log_object_pose>"log_object_pose.dat"</log_object_pose> <!-- FORMAT (linewise): "timestamp[TAB]x(0)[TAB]y(0)[TAB]z(0)[TAB]r1(0)[TAB]r2(0)[TAB]r3(0)[TAB]x(1)[TAB]y(1)[TAB]z(1)[TAB]r1(1)[TAB]r2(1)[TAB]r3(1)..." -->
+		<!-- Virtual Points -->
+			<do_log_virt_point>0</do_log_virt_point> <!-- Transformation from the virtual point KOSYs to the left camera (= x-y-z position of the virtual point in the left camera KOSY in [mm] AND orientation as 3-D rodrigues vector (see cv::Rodrigues()) -->
+			<log_virt_point_pose>"log_virt_point_pose.dat"</log_virt_point_pose> <!-- FORMAT (linewise): "timestamp[TAB]x(0)[TAB]y(0)[TAB]z(0)[TAB]r1(0)[TAB]r2(0)[TAB]r3(0)[TAB]x(1)[TAB]y(1)[TAB]z(1)[TAB]r1(1)[TAB]r2(1)[TAB]r3(1)..." -->
+		<!-- Videos -->
+			<do_log_video>0</do_log_video> <!-- Put the image frames captured by the left and right camera and used for the computations one after another into two .avi video files -->
+			<log_video_left>"log_video_left.avi"</log_video_left>
+			<log_video_right>"log_video_right.avi"</log_video_right>	
+		<!-- Frames -->
+		   	<do_log_frame>0</do_log_frame> <!-- Actual image frame captured by the left and right camera (and used for the computations) -->
+			<log_frame_left_prefix>"log_frame_left_"</log_frame_left_prefix>
+			<log_frame_right_prefix>"log_frame_right_"</log_frame_right_prefix>
+	<!-- Send (to the multicast (UDP) clients) -->
+		<!-- Formats are the same as in the log-files -->
+		<do_send_object_pose>1</do_send_object_pose>
+		<do_send_virt_point_pose>0</do_send_virt_point_pose>	
+		
+</opencv_storage>
