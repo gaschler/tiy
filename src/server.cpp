@@ -14,6 +14,12 @@
 // Licence	   : see LICENCE.txt
 //============================================================================
 
+///////////////////////// TEEEEEEEEEEEEEEEEEEEEEEST ///////////////////////////////
+#define BOOST_LIB_DIAGNOSTIC
+//#define BOOST_ALL_NO_LIB
+#define BOOST_DATE_TIME_NO_LIB
+
+
 #include "multicastServer/MulticastServer.h" // FIRST TO INCLUDE
 
 #include "markerTracking/MarkerTracking.h"
