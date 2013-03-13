@@ -445,10 +445,9 @@ IF(WIN32 AND NOT UNIX)
 ELSE(WIN32 AND NOT UNIX)
 	SET(CPACK_GENERATOR "DEB")
 	SET(CPACK_SOURCE_GENERATOR "TGZ")
-	SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Andreas Pflaum <email@example.com> ") #required
+	SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Andreas Pflaum <tiy@freelists.org> ")
  	SET(DEBIAN_PACKAGE_SECTION "Video" )
-	# TODO: Test (older/less) package dependencies
-	SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libopencv-dev (>= 2.2), libboost-dev (>= 1.46), libboost-thread-dev (>= 1.46), libboost-system-dev (>= 1.46), libboost-filesystem-dev (>= 1.46), libboost-date-time1.46-dev (>= 1.46)")
+	SET(CPACK_DEBIAN_PACKAGE_DEPENDS "libopencv-dev (>= 2.2), libboost-dev (>= 1.46), libboost-thread-dev (>= 1.46), libboost-system-dev (>= 1.46), libboost-filesystem-dev (>= 1.46), libboost-date-time-dev (>= 1.46)")
 	IF(BUILD_x64 AND CMAKE_SIZEOF_VOID_P EQUAL 8)
 		SET(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64" )
 		SET(CPACK_SYSTEM_NAME "linux-amd64")
