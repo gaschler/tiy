@@ -1,12 +1,12 @@
 The StereoCamera class is an abstract base class for using two cameras as a stereo camera.
 
-Child classes inheriting from StereoCamera are [OpenCVStereoCamera](http://code.google.com/p/tiy/wiki/ClassOpenCVStereoCamera) and [BaslerGigEStereoCamera](http://code.google.com/p/tiy/wiki/ClassBaslerGigEStereoCamera).
+Child classes inheriting from StereoCamera are [OpenCVStereoCamera](ClassOpenCVStereoCamera.md) and [BaslerGigEStereoCamera](ClassBaslerGigEStereoCamera.md).
 
 # Usage #
 
 This base class implements the possibility of recording and showing the stereo frames.
 
-For more information (including examples), see child classes [OpenCVStereoCamera](http://code.google.com/p/tiy/wiki/ClassOpenCVStereoCamera) and [BaslerGigEStereoCamera](http://code.google.com/p/tiy/wiki/ClassBaslerGigEStereoCamera).
+For more information (including examples), see child classes [OpenCVStereoCamera](ClassOpenCVStereoCamera.md) and [BaslerGigEStereoCamera](ClassBaslerGigEStereoCamera.md).
 
 # Declaration #
 
@@ -156,7 +156,7 @@ Closes/disconnects the cameras (/video playback).
 ```
 	virtual void startCam();
 ```
-Starts the camera acquisition (only needed by the [BaslerGigEStereoCamera](http://code.google.com/p/tiy/wiki/ClassBaslerGigEStereoCamera) child class).
+Starts the camera acquisition (only needed by the [BaslerGigEStereoCamera](ClassBaslerGigEStereoCamera.md) child class).
 
 ---
 
@@ -164,7 +164,7 @@ Starts the camera acquisition (only needed by the [BaslerGigEStereoCamera](http:
 ```
 	virtual void stopCam();
 ```
-Stops the camera acquisition (only needed by the [BaslerGigEStereoCamera](http://code.google.com/p/tiy/wiki/ClassBaslerGigEStereoCamera) child class).
+Stops the camera acquisition (only needed by the [BaslerGigEStereoCamera](ClassBaslerGigEStereoCamera.md) child class).
 
 ---
 

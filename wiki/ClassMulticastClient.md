@@ -1,4 +1,4 @@
-With the MulticastClient class a UDP multicast client can be created,  waiting asynchronously to receive strings from a multicast server (e.g. [MulticastServer](http://code.google.com/p/tiy/wiki/ClassMulticastServer)).
+With the MulticastClient class a UDP multicast client can be created,  waiting asynchronously to receive strings from a multicast server (e.g. [MulticastServer](ClassMulticastServer.md)).
 
 It is based on a cross-platform asio library [example](http://www.boost.org/doc/libs/1_41_0/doc/html/boost_asio/example/multicast/receiver.cpp).
 
@@ -10,7 +10,7 @@ It is based on a cross-platform asio library [example](http://www.boost.org/doc/
 
 ## Example ##
 
-See [IncludeLibrary](http://code.google.com/p/tiy/wiki/IncludeLibrary) on how to include the TIY library in your own code (e.g. this example).
+See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
 ```
 #include <tiy.h>
@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 	std::string data_string;
 
 	for(int i = 0; true; i++)
-	{			
+	{
 		if (multicast_client.getReceivedString(data_string))
 		{
 			std::cout << "Received string = " << data_string << std::endl;			

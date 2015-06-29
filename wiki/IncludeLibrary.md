@@ -1,10 +1,10 @@
 # 1. Install the TIY library #
 
-Go to [InstallationOnWindows](http://code.google.com/p/tiy/wiki/InstallationOnWindows) to see how to install the TIY library (and examples) on Windows, or [InstallationOnLinux](http://code.google.com/p/tiy/wiki/InstallationOnLinux) for Linux systems respectively.
+Go to [InstallationOnWindows](InstallationOnWindows.md) to see how to install the TIY library (and examples) on Windows, or [InstallationOnLinux](InstallationOnLinux.md) for Linux systems respectively.
 
 # 2. Setup Cmake #
 
-Copy the files _Findtiy.cmake_, _LibFindMacros.cmake_ and _Findaravis.cmake_ from the _src_ directory of the _tiy`_`server_ example ([Downloads](http://code.google.com/p/tiy/downloads/list)) into your project directory.
+Copy the files _Findtiy.cmake_, _LibFindMacros.cmake_ and _Findaravis.cmake_ from the _src_ directory of the _tiy`_`server_ example ([Releases](../releases)) into your project directory.
 
 Granted that your project has only one file called _main.cpp_ including the TIY library like
 ```
@@ -32,7 +32,7 @@ FIND_PACKAGE(tiy REQUIRED)
 
 ## INTERCEPTION ##
 
-IF (WIN32 AND NOT UNIX) 		
+IF (WIN32 AND NOT UNIX)
 	ADD_DEFINITIONS("-DINTERCEPTION_STATIC")
 ENDIF(WIN32 AND NOT UNIX)
 

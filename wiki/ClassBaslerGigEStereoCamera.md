@@ -1,4 +1,4 @@
-The !BaslerGigEStereoCamera class is a child class of [StereoCamera](http://code.google.com/p/tiy/wiki/ClassStereoCamera) for handling two [aravis](http://blogs.gnome.org/emmanuel/2010/04/01/aravis-a-vision-library/) supported cameras to use as a stereo camera.
+The !BaslerGigEStereoCamera class is a child class of [StereoCamera](ClassStereoCamera.md) for handling two [aravis](http://blogs.gnome.org/emmanuel/2010/04/01/aravis-a-vision-library/) supported cameras to use as a stereo camera.
 
 Only Linux is supported.
 
@@ -14,7 +14,7 @@ This child class implements the interface to two Aravis compatible cameras (e.g.
 
 ## Example ##
 
-See [IncludeLibrary](http://code.google.com/p/tiy/wiki/IncludeLibrary) on how to include the TIY library in your own code (e.g. this example).
+See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
 ```
 #include <tiy.h>

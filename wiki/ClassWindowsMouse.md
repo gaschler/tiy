@@ -1,4 +1,4 @@
-The WindowsMouse class is the child class of [MouseDevice](http://code.google.com/p/tiy/wiki/ClassMouseDevice) for low level mouse reading in Windows.
+The WindowsMouse class is the child class of [MouseDevice](ClassMouseDevice.md) for low level mouse reading in Windows.
 
 It is based on [intercepting](http://oblita.com/Interception.html) mouse events of a specific (mouse) device. This is done in a while loop started in a separate thread.
 
@@ -17,7 +17,7 @@ The vid and pid can easily be get by going into the Windows _Device Manager_ -> 
 
 ## Example ##
 
-See [IncludeLibrary](http://code.google.com/p/tiy/wiki/IncludeLibrary) on how to include the TIY library in your own code (e.g. this example).
+See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
 ```
 #include <tiy.h>

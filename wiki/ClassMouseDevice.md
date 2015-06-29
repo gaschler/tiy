@@ -1,10 +1,10 @@
 The MouseDevice class is an abstract base class for low level mouse reading.
 
-Child classes inheriting from MouseDevice are [LinuxMouse](http://code.google.com/p/tiy/wiki/ClassLinuxMouse) and [WindowsMouse](http://code.google.com/p/tiy/wiki/ClassWindowsMouse).
+Child classes inheriting from MouseDevice are [LinuxMouse](ClassLinuxMouse.md) and [WindowsMouse](ClassWindowsMouse.md).
 
 # Usage #
 
-See child classes [LinuxMouse](http://code.google.com/p/tiy/wiki/ClassLinuxMouse) and [WindowsMouse](http://code.google.com/p/tiy/wiki/ClassWindowsMouse).
+See child classes [LinuxMouse](ClassLinuxMouse.md) and [WindowsMouse](ClassWindowsMouse.md).
 
 # Declaration #
 

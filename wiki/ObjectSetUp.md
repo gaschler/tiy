@@ -13,7 +13,7 @@ By putting screws in the screw threads of the markers and perhaps also into the 
 
 In the following figure you can see markers attached to a mouse with polymorph. This object is used as a 3D input (pointing) device and has therefore a peak (created from a nail coated by polymorph).
 
-![http://tiy.googlecode.com/svn/trunk/pics/input_device.jpg](http://tiy.googlecode.com/svn/trunk/pics/input_device.jpg)
+![../pics/input_device.jpg](../pics/input_device.jpg)
 
 Important to know is, that the number and arrangement of the markers should be such that at least 4 markers can be seen (and therefore detected) by the cameras. Otherwise the object cannot be detected correctly.
 

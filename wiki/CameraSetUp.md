@@ -16,7 +16,7 @@ However they are expensive and additional hardware is needed (e.g. for 2 _Basler
   * 2 gigabit Ethernet network cards (e.g. _Intel PRO/1000 GT Desktop_)
   * 2 IR-pass filters (e.g. from _Baader_ or _Astronomik_)
 
-![http://tiy.googlecode.com/svn/trunk/pics/baseler_camera_with_ir_leds.jpg](http://tiy.googlecode.com/svn/trunk/pics/baseler_camera_with_ir_leds.jpg)
+![../pics/baseler_camera_with_ir_leds.jpg](../pics/baseler_camera_with_ir_leds.jpg)
 
 ### OpenCV cameras ###
 Much cheaper and easier to use are USB (web-)cameras supported by OpenCV (small selection at http://opencv.willowgarage.com/wiki/Welcome/OS).
@@ -44,7 +44,7 @@ To use the two cameras as one stereo camera, you need both the intrinsic and ext
 
 They can easily get from the MATLAB camera calibration toolbox (http://www.vision.caltech.edu/bouguetj/calib_doc/). The toolbox can also be used with OCTAVE (see http://www.sparetimelabs.com/cameracalib/index.html).
 
-  1. Download and unzip the _tiy`_`calibration_ _.zip_ file from the [Downloads](http://code.google.com/p/tiy/downloads/list) section
+  1. Download and unzip the _tiy`_`calibration_ _.zip_ file from the [Releases](../releases) section
   1. Download and unzip the toolbox from http://www.vision.caltech.edu/bouguetj/calib_doc/download/toolbox_calib.zip
   1. Put all the MAT-files from the extracted toolbox into the extracted _tiy`_`calibration/camera`_`calibration/toolbox\_calib_ folder
   1. Print out the _tiy`_`calibration/camera`_`calibration/pattern.pdf_ as large as possible and fix it completely flat onto an as inflexible as possible plate.

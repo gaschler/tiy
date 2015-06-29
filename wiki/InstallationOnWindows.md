@@ -56,11 +56,11 @@ Two options are available for installation:
 
 The _tiy`_`client_ example can be downloaded and installed without the TIY library and on all PCs in the same network.
 
-For TIY, download and install the newest _tiy-X.X.-win_ _.exe_ version from the [Downloads](http://code.google.com/p/tiy/downloads/list) area for 64-bit (_amd64_) or 32-bit (_i386_) systems. The TIY library with the _tiy`_`server_ and _tiy`_`client_ example will be installed.
+For TIY, download and install the newest _tiy-X.X.-win_ _.exe_ version from the [Releases](../releases) area for 64-bit (_amd64_) or 32-bit (_i386_) systems. The TIY library with the _tiy`_`server_ and _tiy`_`client_ example will be installed.
 
 ## B. Build from source ##
 
-  1. Download and unzip the newest _tiy-X.X..zip_ (or the _tiy`_`client_ example) file from the [Downloads](http://code.google.com/p/tiy/downloads/list) section
+  1. Download and unzip the newest _tiy-X.X..zip_ (or the _tiy`_`client_ example) file from the [Releases](../releases) section
   1. Start _CMake_ (_cmake-gui_) and select the _src_ directory as source and the _build_ directory as build
   1. Click _Configure_ and choose _Visual Studio 10_ (or Win64 version for 64-bit) as generator
   1. Change the options as you want to

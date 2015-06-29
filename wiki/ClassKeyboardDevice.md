@@ -1,10 +1,10 @@
 The KeyboardDevice class is an abstract base class for low level keyboard reading.
 
-Child classes inheriting from KeyboardDevice are [LinuxKeyboard](http://code.google.com/p/tiy/wiki/ClassLinuxKeyboard) and [WindowsKeyboard](http://code.google.com/p/tiy/wiki/ClassWindowsKeyboard).
+Child classes inheriting from KeyboardDevice are [LinuxKeyboard](ClassLinuxKeyboard.md) and [WindowsKeyboard](ClassWindowsKeyboard.md).
 
 # Usage #
 
-See child classes [LinuxKeyboard](http://code.google.com/p/tiy/wiki/ClassLinuxKeyboard) and [WindowsKeyboard](http://code.google.com/p/tiy/wiki/ClassWindowsKeyboard).
+See child classes [LinuxKeyboard](ClassLinuxKeyboard.md) and [WindowsKeyboard](ClassWindowsKeyboard.md).
 
 # Declaration #
 

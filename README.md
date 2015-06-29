@@ -1,6 +1,6 @@
-![http://tiy.googlecode.com/svn/trunk/pics/TIY_screenshot.jpg](pics/TIY_screenshot.jpg)
+![pics/TIY_screenshot.jpg](pics/TIY_screenshot.jpg)
 
-The TIY library ([Downloads](http://code.google.com/p/tiy/downloads/list)) enables you to easily build your own 3D marker (object) tracking system.
+The TIY library ([Downloads](releases)) enables you to easily build your own 3D marker (object) tracking system.
 
   * **Open-source** (with documentation)
   * **Windows** and **Linux** supported

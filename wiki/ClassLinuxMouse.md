@@ -1,4 +1,4 @@
-The LinuxMouse class is the child class of [MouseDevice](http://code.google.com/p/tiy/wiki/ClassMouseDevice) for low level mouse reading in Linux.
+The LinuxMouse class is the child class of [MouseDevice](ClassMouseDevice.md) for low level mouse reading in Linux.
 
 It is based on reading out the event file of a specific (mouse) device. This is done in a while loop started in a separate thread.
 
@@ -36,7 +36,7 @@ KERNEL=="event*",SUBSYSTEM=="input",ATTRS{idVendor}=="0458",ATTRS{idProduct}=="0
 
 ## Example ##
 
-See [IncludeLibrary](http://code.google.com/p/tiy/wiki/IncludeLibrary) on how to include the TIY library in your own code (e.g. this example).
+See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
 ```
 #include <tiy.h>

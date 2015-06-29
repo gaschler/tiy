@@ -1,4 +1,4 @@
-With the MulticastServer class a UDP multicast server can be created,  to asynchronously send a string to all "connected" multicast clients (e.g. [MulticastClient](http://code.google.com/p/tiy/wiki/ClassMulticastClient)).
+With the MulticastServer class a UDP multicast server can be created,  to asynchronously send a string to all "connected" multicast clients (e.g. [MulticastClient](ClassMulticastClient.md)).
 
 It is based on a cross-platform asio library [example](http://www.boost.org/doc/libs/1_41_0/doc/html/boost_asio/example/multicast/sender.cpp).
 
@@ -10,7 +10,7 @@ It is based on a cross-platform asio library [example](http://www.boost.org/doc/
 
 ## Example ##
 
-See [IncludeLibrary](http://code.google.com/p/tiy/wiki/IncludeLibrary) on how to include the TIY library in your own code (e.g. this example).
+See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
 ```
 #include <tiy.h>
