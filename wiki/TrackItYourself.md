@@ -27,4 +27,4 @@ After setting up the tracking system, attach markers to any objects that need to
 Both steps are explained in the [ObjectSetUp](ObjectSetUp.md) section.
 
 # Integrate the software in your own code #
-If all the steps above have been done, the source code of the _client_ program can be downloaded from the [Releases](../releases) section and integrated in any other software.
+If all the steps above have been done, the source code of the _client_ program can be downloaded from the [Releases](../../../releases) section and integrated in any other software.

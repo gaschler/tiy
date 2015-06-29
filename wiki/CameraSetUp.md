@@ -44,7 +44,7 @@ To use the two cameras as one stereo camera, you need both the intrinsic and ext
 
 They can easily get from the MATLAB camera calibration toolbox (http://www.vision.caltech.edu/bouguetj/calib_doc/). The toolbox can also be used with OCTAVE (see http://www.sparetimelabs.com/cameracalib/cameracalib.php).
 
-  1. Download and unzip the _tiy_calibration.zip_ file from the [Releases](../releases) section
+  1. Download and unzip the _tiy_calibration.zip_ file from the [Releases](../../../releases) section
   1. Download and unzip the toolbox from http://www.vision.caltech.edu/bouguetj/calib_doc/download/toolbox_calib.zip
   1. Put all the MAT-files from the extracted toolbox into the extracted _tiy_calibration/camera_calibration/toolbox\_calib_ folder
   1. Print out the _tiy_calibration/camera_calibration/pattern.pdf_ as large as possible and fix it completely flat onto an as inflexible as possible plate.

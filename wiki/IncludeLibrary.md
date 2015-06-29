@@ -4,7 +4,7 @@ Go to [InstallationOnWindows](InstallationOnWindows.md) to see how to install th
 
 # 2. Setup Cmake #
 
-Copy the files _Findtiy.cmake_, _LibFindMacros.cmake_ and _Findaravis.cmake_ from the _src_ directory of the _tiy`_`server_ example ([Releases](../releases)) into your project directory.
+Copy the files _Findtiy.cmake_, _LibFindMacros.cmake_ and _Findaravis.cmake_ from the _src_ directory of the _tiy`_`server_ example ([Releases](../../../releases)) into your project directory.
 
 Granted that your project has only one file called _main.cpp_ including the TIY library like
 ```

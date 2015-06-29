@@ -39,11 +39,11 @@ Two options are available for installation:
 
 The _tiy_client_ example can be downloaded and installed without the TIY library and on all PCs in the same network.
 
-TIY _.deb_ packages for 64-bit (_amd64_) and 32-bit (_i386_) are available in the [Releases](../releases) section. The TIY library with the _tiy_server_ and _tiy_client_ example will be installed.
+TIY _.deb_ packages for 64-bit (_amd64_) and 32-bit (_i386_) are available in the [Releases](../../../releases) section. The TIY library with the _tiy_server_ and _tiy_client_ example will be installed.
 
 For Aravis camera support, please build from source.
 
-  1. Download the newest _tiy-X.X.-linux_ _.deb_ package from the [Releases](../releases) area.
+  1. Download the newest _tiy-X.X.-linux_ _.deb_ package from the [Releases](../../../releases) area.
   1. Install the package by double clicking on it or by (e.g.):
 ```
  sudo dpkg -i tiy-0.1.-linux-amd64.deb 
@@ -55,7 +55,7 @@ removal by:
 
 ## B. Build from source ##
 
-  1. Download and _unzip_ the newest _tiy-X.X..zip_ file from the [Releases](../releases) section
+  1. Download and _unzip_ the newest _tiy-X.X..zip_ file from the [Releases](../../../releases) section
   1. Go into the _Release_ folder an use _cmake_ to build the make file
 ```
 $ ccmake ../src

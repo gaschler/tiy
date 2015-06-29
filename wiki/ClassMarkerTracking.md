@@ -8,7 +8,7 @@ The basic procedure of tracking objects with markers attached to it by using thi
 
 ## Example ##
 
-This is NOT a full example, as it should only show the basic usage. A full working and complex example is given by the _tiy`_`server_ example from the [Releases](../releases) section (see [InstallationOnWindows](InstallationOnWindows.md)/[InstallationOnLinux](InstallationOnLinux.md) on how to install the TIY library including it and perhaps [TrackItYourself](TrackItYourself.md) for a full TIY tutorial).
+This is NOT a full example, as it should only show the basic usage. A full working and complex example is given by the _tiy`_`server_ example from the [Releases](../../../releases) section (see [InstallationOnWindows](InstallationOnWindows.md)/[InstallationOnLinux](InstallationOnLinux.md) on how to install the TIY library including it and perhaps [TrackItYourself](TrackItYourself.md) for a full TIY tutorial).
 
 See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in your own code (e.g. this example).
 
@@ -178,7 +178,7 @@ Initializes parameters and the Kalman filter.
 ```
 	bool readConfigFiles(const char *camera_config_file_name, const char *object_config_file_name);
 ```
-Reads in the intrinsic and extrinsic parameters and properties of the stereo camera and the parameters of the marker objects/templates from xml files. See the _tiy_server_ example (with example xml-files) from the [Releases](../releases) section (and the [ObjectSetUp](ObjectSetUp.md)/[CameraSetUp](CameraSetUp.md) tutorial) for more information.
+Reads in the intrinsic and extrinsic parameters and properties of the stereo camera and the parameters of the marker objects/templates from xml files. See the _tiy_server_ example (with example xml-files) from the [Releases](../../../releases) section (and the [ObjectSetUp](ObjectSetUp.md)/[CameraSetUp](CameraSetUp.md) tutorial) for more information.
 
   * _camera_config_file_name_: name of the xml file containing the camera parameters (e.g. "config_camera.xml" )
 
@@ -290,7 +290,7 @@ Returns the Kalman filtered input data.
 ```
 Reads in the camera parameters (intrinsic, extrinsic, frame rate, ...) from the given xml file. Used by **readConfigFiles()**
 
-  * _camera_config_file_name_: xml file to read in the camera data from (e.g. see the "config_camera.xml" file from the _tiy_server_ example ([Releases](../releases)) and perhaps the [CameraSetUp](CameraSetUp.md) tutorial for more information)
+  * _camera_config_file_name_: xml file to read in the camera data from (e.g. see the "config_camera.xml" file from the _tiy_server_ example ([Releases](../../../releases)) and perhaps the [CameraSetUp](CameraSetUp.md) tutorial for more information)
 
 ---
 
@@ -300,6 +300,6 @@ Reads in the camera parameters (intrinsic, extrinsic, frame rate, ...) from the 
 ```
 Reads in the marker object data (point matrix) from the given xml file. Used by **readConfigFiles()**
 
-  * _object_config_file_name_: xml file to read in the object data from (e.g. see the "config_object.xml" file from the _tiy_server_ example ([Releases](../releases)) and perhaps the [ObjectSetUp](ObjectSetUp.md) tutorial for more information)
+  * _object_config_file_name_: xml file to read in the object data from (e.g. see the "config_object.xml" file from the _tiy_server_ example ([Releases](../../../releases)) and perhaps the [ObjectSetUp](ObjectSetUp.md) tutorial for more information)
 
 ---
