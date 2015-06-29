@@ -1,4 +1,4 @@
-![http://tiy.googlecode.com/svn/trunk/pics/TIY_screenshot.jpg](http://tiy.googlecode.com/svn/trunk/pics/TIY_screenshot.jpg)
+![http://tiy.googlecode.com/svn/trunk/pics/TIY_screenshot.jpg](pics/TIY_screenshot.jpg)
 
 The TIY library ([Downloads](http://code.google.com/p/tiy/downloads/list)) enables you to easily build your own 3D marker (object) tracking system.
 
@@ -17,7 +17,7 @@ Markers are at most reflecting or shining little balls attached to an object tha
 To find a specific object and detect its **3D pose** (position and orientation relative to the camera), multiple markers need to be attached to it and their arrangement saved as a template once. At runtime, the software compares all the actual detected markers (3D points) at every time instance with the arrangement of the 3D points saved in the template before. By comparison, the actual object pose can be computed.
 
 # What can I do with the TIY library (and example)? #
-After camera calibration ([CameraSetUp](http://code.google.com/p/tiy/wiki/CameraSetUp)), any objects can be calibrated ([ObjectSetUp](http://code.google.com/p/tiy/wiki/ObjectSetUp)) and their 3D poses tracked by the system.
+After camera calibration ([CameraSetUp](wiki/CameraSetUp.md)), any objects can be calibrated ([ObjectSetUp](wiki/ObjectSetUp.md)) and their 3D poses tracked by the system.
 
 Therefore the system can, for instance, be used in form of a **3D input device**. It is already used in an application of controlling a robot and interacting with a 2D user interface projected on a tracked surface.
 
@@ -33,7 +33,7 @@ For first TIY software tests, NO additional hardware ist needed.
 
 For building an own tracking system, the only necessary hardware components are **two cameras** (infrared capable) connected to the computer and an **object to track** (with reflecting marker balls mounted on it).
 
-A complete soft- and hardware tutorial in 4 steps is given on the [TrackItYourself](http://code.google.com/p/tiy/wiki/TrackItYourself) Wiki page.
+A complete soft- and hardware tutorial in 4 steps is given on the [TrackItYourself](wiki/TrackItYourself.md) Wiki page.
 
 # Any Questions? #
 Subscribe to the mailing list _tiy@freelists.org_ ( http://www.freelists.org/list/tiy ).
