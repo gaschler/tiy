@@ -91,13 +91,13 @@ private:
 ```
 Creates and opens an UDP socket with the given network parameters. Starts receiving (waiting for data) in a new thread and returns.
 
-> _io`_`service_: boost asio io\_service
+  * _io_service_: boost asio io\_service
 
-> _multicast`_`address_: socket join group address used by the client and server (e.g. "239.255.0.1", IP6: "ff31::8000:1234")
+  * _multicast_address_: socket join group address used by the client and server (e.g. "239.255.0.1", IP6: "ff31::8000:1234")
 
-> _multicast`_`port_: port used by the client and server (e.g. 30000, short int, < 32768)
+  * _multicast_port_: port used by the client and server (e.g. 30000, short int, < 32768)
 
-> _do`_`debugging`_`_: set to true to get debug output
+  * _do_debugging`_`_: set to true to get debug output
 
 ---
 
@@ -112,9 +112,9 @@ Creates and opens an UDP socket with the given network parameters. Starts receiv
 ```
 	 void sendString(std::string send_string);
 ```
-Sends the string _send`_`string with_async`_`send`_`to()_to all "connected" clients. Calls **handleSend()** in a new thread._
+Sends the string _send_string_ to all "connected" clients. Calls **handleSend()** in a new thread.
 
-> _send`_`string_: string that should be send
+  * _send_string_: string that should be send
 
 ---
 
@@ -132,6 +132,6 @@ Calls the client to stop.
 ```
 Checks if errors occur during the sending.
 
-> _error_: contains information about a (potentially) error
+  * _error_: contains information about a (potentially) error
 
 ---

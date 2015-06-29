@@ -12,27 +12,27 @@ It is based on reading out the event file of a specific (keyboard) device. This 
 ## Creating a specific event-file (optional) ##
 As the event files _event0_,_event1_,... created by Unix in _/dev/input/_ can change at every start or re-plug, the best way is to build a _udev_ rule to connect a specific device to a specific event-file:
 
-> First get the vendor id (vid) and product id (pid) of your device. A good way is to plug the device out, run
+  * First get the vendor id (vid) and product id (pid) of your device. A good way is to plug the device out, run
 ```
 $ lsusb
 ```
-> , plug the device in, run _lsusb_ again and watch for a new line like
+  * , plug the device in, run _lsusb_ again and watch for a new line like
 ```
 Bus 004 Device 005: ID 0458:00c5 KYE Systems Corp. (Keyboard Systems)
 ```
-> vid: 0458, pid: 00c5
+  * vid: 0458, pid: 00c5
 
-> Second add and set a new _udev_ rule (e.g. "66-my-keyboard-usb.rules")
+  * Second add and set a new _udev_ rule (e.g. "66-my-keyboard-usb.rules")
 ```
 $ sudo gedit /etc/udev/rules.d/66-my-keyboard-usb.rules
 ```
-> and write (e.g. of the vid and pid above and the new event-file _/dev/input/my-keyboard-event_
+  * and write (e.g. of the vid and pid above and the new event-file _/dev/input/my-keyboard-event_
 ```
 KERNEL=="event*",SUBSYSTEM=="input",ATTRS{idVendor}=="0458",ATTRS{idProduct}=="00c5",MODE="0644"
 KERNEL=="event*",SUBSYSTEM=="input",ATTRS{idVendor}=="0458",ATTRS{idProduct}=="00c5",SYMLINK+="input/my-keyboard-event"
 ```
 
-> Third save the file and restart the computer to activate the rule.
+  * Third save the file and restart the computer to activate the rule.
 
 ## Example ##
 
@@ -120,7 +120,7 @@ public:
 	virtual void startRead(int& read_intervall_ms);
 ```
 Start reading the keyboard in an update loop (called by **openAndReadKeyboard()** in a new thread)
-> _read`_`intervall`_`ms_: pause in milliseconds after each keyboard update (one loop pass)
+  * _read_intervall_ms_: pause in milliseconds after each keyboard update (one loop pass)
 
 ---
 
@@ -128,7 +128,7 @@ Start reading the keyboard in an update loop (called by **openAndReadKeyboard()*
 ```
 	LinuxKeyboard(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -144,8 +144,8 @@ Start reading the keyboard in an update loop (called by **openAndReadKeyboard()*
 	virtual bool openAndReadKeyboard(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the keyboard and start reading it (starts **startRead()** in a new thread)
-> _event`_`file`_`name_: path to event file of the device (e.g. "/dev/input/event3")
+  * _event_file_name_: path to event file of the device (e.g. "/dev/input/event3")
 
-> _read`_`intervall`_`ms_: pause in milliseconds after each keyboard update
+  * _read_intervall_ms_: pause in milliseconds after each keyboard update
 
 ---

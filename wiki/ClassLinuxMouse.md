@@ -12,27 +12,27 @@ It is based on reading out the event file of a specific (mouse) device. This is 
 ## Creating a specific event-file (optional) ##
 As the event files _event0_,_event1_,... created by unix in _/dev/input/_ can change at every start or re-plug, the best way is to build a udev rule to connect a specific device to a specific event-file:
 
-> First get the vendor id (vid) and product id (pid) of your device. A good way is to plug the device out, run
+  * First get the vendor id (vid) and product id (pid) of your device. A good way is to plug the device out, run
 ```
 $ lsusb
 ```
-> , plug the device in, run _lsusb_ again and watch for a new line like
+  * , plug the device in, run _lsusb_ again and watch for a new line like
 ```
 Bus 004 Device 005: ID 0458:00c5 KYE Systems Corp. (Mouse Systems)
 ```
-> vid: 0458, pid: 00c5
+  * vid: 0458, pid: 00c5
 
-> Second add and set a new udev rule (e.g. "66-my-mouse-usb.rules")
+  * Second add and set a new udev rule (e.g. "66-my-mouse-usb.rules")
 ```
 $ sudo gedit /etc/udev/rules.d/66-genius-mouse-usb.rules
 ```
-> and write (e.g. of the vid and pid above and the new event-file _/dev/input/my-mouse-event_
+  * and write (e.g. of the vid and pid above and the new event-file _/dev/input/my-mouse-event_
 ```
 KERNEL=="event*",SUBSYSTEM=="input",ATTRS{idVendor}=="0458",ATTRS{idProduct}=="00c5",MODE="0644"
 KERNEL=="event*",SUBSYSTEM=="input",ATTRS{idVendor}=="0458",ATTRS{idProduct}=="00c5",SYMLINK+="input/my-mouse-event"
 ```
 
-> Third save the file and restart the computer to activate the rule.
+  * Third save the file and restart the computer to activate the rule.
 
 ## Example ##
 
@@ -46,7 +46,7 @@ See [IncludeLibrary](IncludeLibrary.md) on how to include the TIY library in you
 int main(int argc, char* argv[])
 {
   std::string mouse_device_id = "/dev/input/my-mouse-event";
-  int read_intervall_ms = 1;  
+  int read_intervall_ms = 1;
   bool do_debugging = false;
 
   // 1. Create a LinuxMouse object (here from an MouseDevice object)
@@ -134,7 +134,7 @@ public:
 	virtual void startRead(int& read_intervall_ms);
 ```
 Start reading the mouse in an update loop (called by **openAndReadMouse()** in a new thread)
-> _read`_`intervall`_`ms_: pause in milliseconds after each mouse update (one loop pass)
+  * _read_intervall_ms_: pause in milliseconds after each mouse update (one loop pass)
 
 ---
 
@@ -142,7 +142,7 @@ Start reading the mouse in an update loop (called by **openAndReadMouse()** in a
 ```
 	LinuxMouse(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -158,8 +158,8 @@ Start reading the mouse in an update loop (called by **openAndReadMouse()** in a
 	virtual bool openAndReadMouse(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the mouse and start reading it (starts **startRead()** in a new thread)
-> _event`_`file`_`name_: path to event file of the device (e.g. "/dev/input/event3")
+  * _event_file_name_: path to event file of the device (e.g. "/dev/input/event3")
 
-> _read`_`intervall`_`ms_: pause in milliseconds after each mouse update
+  * _read_intervall_ms_: pause in milliseconds after each mouse update
 
 ---

@@ -81,15 +81,15 @@ Constructor to initialize parameters for two real cameras as stereo input source
 ```
 Constructor to initialize parameters for two video files as stereo input source (e.g. recorded by this class).
 
-> _do`_`debugging`_`_: set to true to get debug output
+  * _do_debugging`_`_: set to true to get debug output
 
-> _camera`_`id`_`left/right_: id of the left/right camera (e.g. "0" and "1" (OpenCV) or "Basler-21050001" and "Basler-21047766" (Basler))
+  * _camera_id_left/right_: id of the left/right camera (e.g. "0" and "1" (OpenCV) or "Basler-21050001" and "Basler-21047766" (Basler))
 
-> _frame`_`width/height_: horizontal/vertical pixel resolution of the cameras
+  * _frame_width/height_: horizontal/vertical pixel resolution of the cameras
 
-> _camera`_`exposure/gain/framerate_: exposure/gain/framerate of the cameras
+  * _camera_exposure/gain/framerate_: exposure/gain/framerate of the cameras
 
-> _video`_`file`_`left/right_: name of the left/right video file used as input (e.g.  "video\_left.avi"/"video\_right.avi")
+  * _video_file_left/right_: name of the left/right video file used as input (e.g.  "video\_left.avi"/"video\_right.avi")
 
 ---
 
@@ -116,7 +116,7 @@ Set the values of the mouse event variables (called by the update loop in **star
 ```
 Initializes and opens a stereo video recorder. To actually record a stereo frame to the files, call **recordFrame()** for each frame.
 
-> _video`_`dst`_`file`_`left/right_: hardware id (win) or event file (Unix) of the device
+  * _video_dst_file_left/right_: hardware id (win) or event file (Unix) of the device
 
 ---
 
@@ -132,7 +132,7 @@ Stops the recording.
 ```
 	bool recordFrame();
 ```
-Records (adds) the actual stereo frame to the video files _video`_`dst`_`file`_`left/right_. Need to be called for EVERY single stereo frame. Should usually be called every time after a new frame is grabbed by **grabFrame()**.
+Records (adds) the actual stereo frame to the video files _video_dst_file_left/right_. Need to be called for EVERY single stereo frame. Should usually be called every time after a new frame is grabbed by **grabFrame()**.
 
 ---
 
@@ -175,11 +175,11 @@ Stops the camera acquisition (only needed by the [BaslerGigEStereoCamera](ClassB
 ```
 Grabs a new synchronized stereo frame from the two cameras/video files and sets the timestamp.
 
-> _image`_`left/right_: contains the left/right stereo frame grabbed from the left/right camera/video file
+  * _image_left/right_: contains the left/right stereo frame grabbed from the left/right camera/video file
 
-> _timestamp`_`us`_`_: frame timestamp in microseconds (time elapsed since the constructor was called)
+  * _timestamp_us`_`_: frame timestamp in microseconds (time elapsed since the constructor was called)
 
-> _timeout`_`seconds_: available time in seconds (roughly) for trying to get a synchronized stereo frame before returning
+  * _timeout_seconds_: available time in seconds (roughly) for trying to get a synchronized stereo frame before returning
 
 ---
 
@@ -195,6 +195,6 @@ Display the actual stereo frame (one window per frame). As it is based on cv::im
 ```
 	cv::Mat createImage();
 ```
-Create and return a cv::Mat image with the size (_frame`_`height_, _frame`_`width_) and type (_mat`_`type_ = _CV`_`8UC1_) of the camera/video frames
+Create and return a cv::Mat image with the size (_frame_height_, _frame_width_) and type (_mat_type_ = _CV_8UC1_) of the camera/video frames
 
 ---

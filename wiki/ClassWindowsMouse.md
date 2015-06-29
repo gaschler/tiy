@@ -11,7 +11,7 @@ It is based on [intercepting](http://oblita.com/Interception.html) mouse events 
 
 ## Getting the hardware id of a specific mouse ##
 
-In order to use and block only one specific mouse connected, this device needs to be identified by its hardware id. The WindowsMouse class needs a string with the components "VID`_`xxxx" (vendor id) and "PID`_`xxxx" (product id) like "VID\_046DPID\_C52B".
+In order to use and block only one specific mouse connected, this device needs to be identified by its hardware id. The WindowsMouse class needs a string with the components "VID\_xxxx" (vendor id) and "PID\_xxxx" (product id) like "VID\_046DPID\_C52B".
 
 The vid and pid can easily be get by going into the Windows _Device Manager_ -> right clicking on the device -> _Properties_ -> _Details_ tab -> choosing the _Property_: _Hardware-IDs_ and copying one of the hids containing the strings "VID\_xxx" and "PID\_xxx".
 
@@ -116,7 +116,7 @@ public:
 	virtual void startRead(int& read_intervall_ms);
 ```
 Start reading the mouse in an update loop (called by **openAndReadMouse()** in a new thread)
-> _read`_`intervall`_`ms_: NOT used
+  * _read_intervall_ms_: NOT used
 
 ---
 
@@ -124,7 +124,7 @@ Start reading the mouse in an update loop (called by **openAndReadMouse()** in a
 ```
 	WindowsMouse(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -140,8 +140,8 @@ Start reading the mouse in an update loop (called by **openAndReadMouse()** in a
 	virtual bool openAndReadMouse(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the keyboard and start reading it (starts **startRead()** in a new thread)
-> _hardware`_`id_: hardware id of the device (e.g. "VID\_046DPID\_C52B")
+  * _hardware_id_: hardware id of the device (e.g. "VID\_046DPID\_C52B")
 
-> _read`_`intervall`_`ms_: NOT used
+  * _read_intervall_ms_: NOT used
 
 ---

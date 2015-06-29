@@ -12,7 +12,7 @@ They have high resolutions, provide many different settings and have small disto
 
 However they are expensive and additional hardware is needed (e.g. for 2 _Basler acA1300-30GC_ cameras):
   * 2 power over Ethernet (PoE) power supply (e.g. _PHIHONG POE20U-560(G)_)
-  * 4 CAT6 gigabit Ethernet network cables (camera`<->`PoE and PoE`<->`pc)
+  * 4 CAT6 gigabit Ethernet network cables (camera<->PoE and PoE<->pc)
   * 2 gigabit Ethernet network cards (e.g. _Intel PRO/1000 GT Desktop_)
   * 2 IR-pass filters (e.g. from _Baader_ or _Astronomik_)
 
@@ -35,16 +35,16 @@ Besides the two cameras with IR-pass filters you also need infrared lights. It i
 A common way is to buy LED IR-spotlights/illuminators (e.g. 4 _Kingbright BL0106-15-28_ with (preferably adjustable) power supply _ANSMANN APS 2250L_) and attach them to the cameras.
 
 # Set up the cameras for TIY #
-To use the real cameras in the TIY _server_ program instead of the recorded videos, change the option _<input`_`src>_ in the _config`_`run`_`parameters.xml_ configuration file to either _b_ to use the Aravis interface (e.g. for GigE Basler cameras) or to _o_ for using the OpenCV interface (e.g. for USB webcams).
+To use the real cameras in the TIY _server_ program instead of the recorded videos, change the option _<input_src>_ in the _config_run_parameters.xml_ configuration file to either _b_ to use the Aravis interface (e.g. for GigE Basler cameras) or to _o_ for using the OpenCV interface (e.g. for USB webcams).
 
-When starting the _server_ program, an error should occur and all connected cameras listed. The appeared names/numbers need to be filled into the first two fields of the _config`_`camera.xml_ configuration file. In addition, the frame width, height and rate must be adapted. The exposure, gain and segmentation areas need to be tested and adjusted when testing the object tracking.
+When starting the _server_ program, an error should occur and all connected cameras listed. The appeared names/numbers need to be filled into the first two fields of the _config_camera.xml_ configuration file. In addition, the frame width, height and rate must be adapted. The exposure, gain and segmentation areas need to be tested and adjusted when testing the object tracking.
 
 # Camera calibration #
 To use the two cameras as one stereo camera, you need both the intrinsic and extrinsic camera parameters.
 
-They can easily get from the MATLAB camera calibration toolbox (http://www.vision.caltech.edu/bouguetj/calib_doc/). The toolbox can also be used with OCTAVE (see http://www.sparetimelabs.com/cameracalib/index.html).
+They can easily get from the MATLAB camera calibration toolbox (http://www.vision.caltech.edu/bouguetj/calib_doc/). The toolbox can also be used with OCTAVE (see http://www.sparetimelabs.com/cameracalib/cameracalib.php).
 
-  1. Download and unzip the _tiy_calibration_ _.zip_ file from the [Releases](../releases) section
+  1. Download and unzip the _tiy_calibration.zip_ file from the [Releases](../releases) section
   1. Download and unzip the toolbox from http://www.vision.caltech.edu/bouguetj/calib_doc/download/toolbox_calib.zip
   1. Put all the MAT-files from the extracted toolbox into the extracted _tiy_calibration/camera_calibration/toolbox\_calib_ folder
   1. Print out the _tiy_calibration/camera_calibration/pattern.pdf_ as large as possible and fix it completely flat onto an as inflexible as possible plate.

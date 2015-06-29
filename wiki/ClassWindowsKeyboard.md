@@ -104,7 +104,7 @@ Standard key codes of the specific keys (here ESC and SPACE).
 	virtual void startRead(int& read_intervall_ms);
 ```
 Start reading the keyboard in an update loop (called by **openAndReadKeyboard()** in a new thread)
-> _read`_`intervall`_`ms_: NOT used
+  * _read_intervall_ms_: NOT used
 
 ---
 
@@ -112,7 +112,7 @@ Start reading the keyboard in an update loop (called by **openAndReadKeyboard()*
 ```
 	WindowsKeyboard(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -128,8 +128,8 @@ Start reading the keyboard in an update loop (called by **openAndReadKeyboard()*
 	virtual bool openAndReadKeyboard(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the keyboard and start reading it (starts **startRead()** in a new thread)
-> _hardware`_`id_: NOT used
+  * _hardware_id_: NOT used
 
-> _read`_`intervall`_`ms_: NOT used
+  * _read_intervall_ms_: NOT used
 
 ---

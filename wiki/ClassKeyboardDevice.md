@@ -46,7 +46,7 @@ public:
 	virtual void startRead(int& read_intervall_ms) = 0;
 ```
 Start reading the keyboard in an update loop (called by **openAndReadKeyboard()** in a new thread)
-> _read`_`intervall`_`ms_: pause in milliseconds after each keyboard update (one loop pass) (Unix)
+  * _read_intervall_ms_: pause in milliseconds after each keyboard update (one loop pass) (Unix)
 
 ---
 
@@ -62,7 +62,7 @@ Set the values of the key event variables (called by the update loop in **startR
 ```
 	KeyboardDevice(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -78,9 +78,9 @@ Set the values of the key event variables (called by the update loop in **startR
 	virtual bool openAndReadKeyboard(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the keyboard and start reading it (starts **startRead()** in a new thread)
-> _event`_`file`_`name_: event file (Unix) of the device
+  * _event_file_name_: event file (Unix) of the device
 
-> _read`_`intervall`_`ms_: pause in milliseconds after each keyboard update (Unix)
+  * _read_intervall_ms_: pause in milliseconds after each keyboard update (Unix)
 
 ---
 

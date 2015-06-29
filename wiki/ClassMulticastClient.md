@@ -108,15 +108,15 @@ private:
 ```
 Creates and opens an UDP socket with the given network parameters. Starts receiving (waiting for data) in a new thread and returns.
 
-> _io`_`service_: boost asio io\_service
+  * _io_service_: boost asio io\_service
 
-> _listen`_`address_: endpoint address used by the client (e.g. "0.0.0.0", IP6: "0::0")
+  * _listen_address_: endpoint address used by the client (e.g. "0.0.0.0", IP6: "0::0")
 
-> _multicast`_`address_: socket join group address used by the client and server (e.g. "239.255.0.1", IP6: "ff31::8000:1234")
+  * _multicast_address_: socket join group address used by the client and server (e.g. "239.255.0.1", IP6: "ff31::8000:1234")
 
-> _multicast`_`port_: port used by the client and server (e.g. 30000, short int, < 32768)
+  * _multicast_port_: port used by the client and server (e.g. 30000, short int, < 32768)
 
-> _do`_`debugging`_`_: set to true to get debug output
+  * _do_debugging`_`_: set to true to get debug output
 
 ---
 
@@ -126,7 +126,7 @@ Creates and opens an UDP socket with the given network parameters. Starts receiv
 ```
 If _true_ returned, the newest received data string is stored in _data`_`string_ and the internal status is set to "no new data". Otherwise, an _false_ and an empty string is returned.
 
-> _data`_`string_: contains the latest received string, that has not been get yet (if no new data, it is set to an empty string)
+  * _data_string_: contains the latest received string, that has not been get yet (if no new data, it is set to an empty string)
 
 ---
 
@@ -144,8 +144,8 @@ Calls the client to stop.
 ```
 Handles the received data (copy into a string) or errors and starts waiting for new data (in a new thread).
 
-> _error_: contains the information about an error, if occurred
+  * _error_: contains the information about an error, if occurred
 
-> _bytes`_`recvd_: contains the information on how many bytes received
+  * _bytes_recvd_: contains the information on how many bytes received
 
 ---

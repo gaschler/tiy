@@ -6,7 +6,7 @@ Go to [InstallationOnWindows](InstallationOnWindows.md) to see how to install th
 # 2. Software tests #
 To get a first impression of the software and check if everything works fine, you should start the _client_ and _server_ program and play with the _config_run_parameters.xml_ configuration file.
 
-On Linux you have to change the _<keyboard_device_id>_ field in the run configuration file to define your keyboard before starting the _/usr/local/tiy/client_ and _/usr/local/tiy/server_ programs (see therefore _/user/include/tiy/inputDevice/unix/LinuxDevice`_`README.txt_).
+On Linux you have to change the _<keyboard_device_id>_ field in the run configuration file to define your keyboard before starting the _/usr/local/tiy/client_ and _/usr/local/tiy/server_ programs (see therefore _/user/include/tiy/inputDevice/unix/LinuxDevice_README.txt_).
 
 On Windows systems you can start _C:/tiy/bin/tiy/client.exe_ and _C:/tiy/bin/tiy/server.exe_ without any preconfigurations.
 
@@ -27,4 +27,4 @@ After setting up the tracking system, attach markers to any objects that need to
 Both steps are explained in the [ObjectSetUp](ObjectSetUp.md) section.
 
 # Integrate the software in your own code #
-If all the steps above have been done, the source code of the _client_ program can be downloaded from the [Downloads](../releases) section and integrated in any other software.
+If all the steps above have been done, the source code of the _client_ program can be downloaded from the [Releases](../releases) section and integrated in any other software.

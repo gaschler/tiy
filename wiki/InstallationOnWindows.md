@@ -21,14 +21,17 @@ Tested on Windows 7 64-bit.
 ```
 cd c:\boost_1_53_0
 ```
+
     1. Build the boost builder (in x86):
+    
 ```
 setenv /x86 /Release  // only necessary in the SDK command prompt
-```
-```
+
 bootstrap
 ```
+
     1. Build boost for 32-Bit (header files: _C:\boost\include\boost-(version)_, 32(64)-bit libraries: _C:\boost\lib\boost-(version)_)
+    
 ```
 b2 --toolset=msvc-10.0 --build-type=complete install --libdir=C:\boost\lib\ --includedir=C:\boost\include\ --with-thread --with-chrono --with-regex --with-date_time --with-filesystem --with-system
 ```
@@ -40,9 +43,9 @@ setenv /x64 /Release
 b2 --toolset=msvc-10.0 --build-type=complete install --libdir=C:\boost\lib\ --includedir=C:\boost\include\ --with-thread --with-chrono --with-regex --with-date_time --with-filesystem --with-system architecture=x86 address-model=64
 ```
   * **Interception**:
-    1. Download the installer from https://github.com/downloads/oblitum/Interception/install-interception.exe
-    1. Run the command prompt as admin (see point 4. under OpenCV), navigate to the directory, where the downloaded _install-interception.exe_ is located and type _install-interception.exe /install_
-    1. Reboot your system before the first use of the TIY library
+   1. Download the installer from https://github.com/downloads/oblitum/Interception/install-interception.exe
+   1. Run the command prompt as admin (see point 4. under OpenCV), navigate to the directory, where the downloaded _install-interception.exe_ is located and type _install-interception.exe /install_
+   1. Reboot your system before the first use of the TIY library
   * **CMake** (optional - only when building TIY yourself):
     Downloadable from http://www.cmake.org/cmake/resources/software.html
 
@@ -60,7 +63,7 @@ For TIY, download and install the newest _tiy-X.X.-win.exe_ version from the [Re
 
 ## B. Build from source ##
 
-  1. Download and unzip the newest _tiy-X.X..zip_ (or the _tiy_client_ example) file from the [Releases](../releases) section
+  1. Download and unzip the newest _tiy-X.X.zip_ (or the _tiy_client_ example) file from the [Releases](../releases) section
   1. Start _CMake_ (_cmake-gui_) and select the _src_ directory as source and the _build_ directory as build
   1. Click _Configure_ and choose _Visual Studio 10_ (or Win64 version for 64-bit) as generator
   1. Change the options as you want to

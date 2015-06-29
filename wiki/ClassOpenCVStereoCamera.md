@@ -182,15 +182,15 @@ Constructor to initialize parameters for two real cameras as stereo input source
 ```
 Constructor to initialize parameters for two video files as stereo input source (e.g. recorded by this class).
 
-> _do`_`debugging`_`_: set to true to get debug output
+  * _do_debugging`_`_: set to true to get debug output
 
-> _camera`_`id`_`left/right_: id of the left/right camera (e.g. "0" and "1")
+  * _camera_id_left/right_: id of the left/right camera (e.g. "0" and "1")
 
-> _frame`_`width/height_: horizontal/vertical pixel resolution of the cameras
+  * _frame_width/height_: horizontal/vertical pixel resolution of the cameras
 
-> _camera`_`exposure/gain/framerate_: exposure/gain/framerate of the cameras
+  * _camera_exposure/gain/framerate_: exposure/gain/framerate of the cameras
 
-> _video`_`file`_`left/right_: name of the left/right video file used as input (e.g.  "video\_left.avi"/"video\_right.avi")
+  * _video_file_left/right_: name of the left/right video file used as input (e.g.  "video\_left.avi"/"video\_right.avi")
 
 ---
 
@@ -240,10 +240,10 @@ NOT used.
 ```
 Grabs the newest synchronized stereo frame from the two cameras/video files (if the grab rate is higher than the frame rate, the frame can be the previous one) and sets the timestamp.
 
-> _image`_`left/right_: contains the left/right stereo frame grabbed from the left/right camera/video file
+  * _image_left/right_: contains the left/right stereo frame grabbed from the left/right camera/video file
 
-> _timestamp`_`us`_`_: frame timestamp in microseconds (time elapsed since the constructor was called)
+  * _timestamp_us`_`_: frame timestamp in microseconds (time elapsed since the constructor was called)
 
-> _timeout`_`seconds_: available time in seconds (roughly) for trying to get a synchronized stereo frame before returning
+  * _timeout_seconds_: available time in seconds (roughly) for trying to get a synchronized stereo frame before returning
 
 ---

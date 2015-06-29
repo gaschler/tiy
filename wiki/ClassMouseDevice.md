@@ -50,7 +50,7 @@ public:
 	virtual void startRead(int& read_intervall_ms) = 0;
 ```
 Start reading the mouse in an update loop (called by **openAndReadMouse()** in a new thread)
-> _read`_`intervall`_`ms_: pause in milliseconds after each mouse update (one loop pass) (Unix)
+  * _read_intervall_ms_: pause in milliseconds after each mouse update (one loop pass) (Unix)
 
 ---
 
@@ -68,7 +68,7 @@ Set the values of the mouse event variables (called by the update loop in **star
 ```
 	MouseDevice(bool& do_debugging_);
 ```
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -84,9 +84,9 @@ Set the values of the mouse event variables (called by the update loop in **star
 	virtual bool openAndReadMouse(std::string& event_file_name, int& read_intervall_ms) = 0;
 ```
 Connect to the mouse and start reading it (starts **startRead()** in a new thread)
-> _event`_`file`_`name_: hardware id (win) or event file (Unix) of the device
+  * _event_file_name_: hardware id (win) or event file (Unix) of the device
 
-> _read`_`intervall`_`ms_: pause in milliseconds after each keyboard update (Unix)
+  * _read_intervall_ms_: pause in milliseconds after each keyboard update (Unix)
 
 ---
 

@@ -75,8 +75,7 @@ $ make
 ```
  $ make package
 ```
-> and install it as under point A.2.
-> Alternatively, the project can directly be installed (more difficult to remove) by
+  * and install it as under point A.2. Alternatively, the project can directly be installed (more difficult to remove) by
 ```
  $ make install
 ```

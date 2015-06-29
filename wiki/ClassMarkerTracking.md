@@ -34,10 +34,10 @@ int main(int argc, char* argv[])
   }
 
   // 3. Init and start stereo camera here (with parameters from m_track)
-  // ...  
+  // ...
   // cv::Mat image_left = stereo_camera->createImage();
   // cv::Mat image_right = stereo_camera->createImage();
-  // long long int frame_timestamp;  
+  // long long int frame_timestamp;
 
 
   // 4. Main (tracking) loop
@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
     	  avg_dev.push_back(0);
       }
 
-      for(int r = 0; r < m_track.num_templates; r++)	  
+      for(int r = 0; r < m_track.num_templates; r++)
     	  m_track.fit3DPointsToObjectTemplate(points_3D, r, RT_template_leftcam[r], &avg_dev[r]);
 
       // 4e. Output the transformation matrix from the objects to the left camera KoSy
@@ -163,7 +163,7 @@ private:
 ```
 Initializes parameters and the Kalman filter.
 
-> _do`_`debugging_: set to true for debug output
+  * _do_debugging_: set to true for debug output
 
 ---
 
@@ -178,11 +178,11 @@ Initializes parameters and the Kalman filter.
 ```
 	bool readConfigFiles(const char *camera_config_file_name, const char *object_config_file_name);
 ```
-Reads in the intrinsic and extrinsic parameters and properties of the stereo camera and the parameters of the marker objects/templates from xml files. See the _tiy`_`server_ example (with example xml-files) from the [Releases](../releases) section (and the [ObjectSetUp](ObjectSetUp.md)/[CameraSetUp](CameraSetUp.md) tutorial) for more information.
+Reads in the intrinsic and extrinsic parameters and properties of the stereo camera and the parameters of the marker objects/templates from xml files. See the _tiy_server_ example (with example xml-files) from the [Releases](../releases) section (and the [ObjectSetUp](ObjectSetUp.md)/[CameraSetUp](CameraSetUp.md) tutorial) for more information.
 
-> _camera`_`config`_`file`_`name_: name of the xml file containing the camera parameters (e.g. "config`_`camera.xml" )
+  * _camera_config_file_name_: name of the xml file containing the camera parameters (e.g. "config_camera.xml" )
 
-> _object`_`config`_`file`_`name_: name of the xml file containing the marker object parameters (e.g. "config`_`object.xml" )
+  * _object_config_file_name_: name of the xml file containing the marker object parameters (e.g. "config_object.xml" )
 
 ---
 
@@ -190,15 +190,15 @@ Reads in the intrinsic and extrinsic parameters and properties of the stereo cam
 ```
 	void get2DPointsFromFile(const char *file_name, std::vector< ::cv::Point2f > *points_2D, int frame_id);
 ```
-Reads in 2D points (x,y pixel positions) in _points`_`2D_ out of the _frame`_`id\_th line of the file_file`_`name_(as an alternative to **get2DPointsFromImage()**, e.g. for testing (no camera needed))._
+Reads in 2D points (x,y pixel positions) in _points_2D_ out of the _frame_id\_th line of the file_file_name_(as an alternative to **get2DPointsFromImage()**, e.g. for testing (no camera needed))._
 
 Each line consists of a sequence of the x and y pixel positions (of a 2D point on a virtual left/right stereo image), with all values and pairs separated by a separator like SPACE or TAB (e.g. "344.003 888.938 647.873 732.0874 ...").
 
-> _file`_`name_: name of the file to read the 2D points from
+  * _file_name_: name of the file to read the 2D points from
 
-> _points`_`2D_: vector where all found 2D points  will be saved
+  * _points_2D_: vector where all found 2D points  will be saved
 
-> _frame`_`id_: line of the file to read the points
+  * _frame_id_: line of the file to read the points
 
 ---
 
@@ -208,9 +208,9 @@ Each line consists of a sequence of the x and y pixel positions (of a 2D point o
 ```
 Search for 2D points in the left/right image frame _camera`_`image_. This is done by segmenting and histogram thresholding to filter for bright (white) points.
 
-> _camera`_`image_: left or right image frame of the stereo camera (grayscale)
+  * _camera_image_: left or right image frame of the stereo camera (grayscale)
 
-> _points`_`2D_: Vector where all found 2D points (x,y pixel positions) will be saved
+  * _points_2D_: Vector where all found 2D points (x,y pixel positions) will be saved
 
 ---
 
@@ -222,7 +222,7 @@ Returns 3D points computed from the 2D points (of the left and right camera imag
 
 The return value is a matrix with 4 rows and one 3D point per column (x,y,z position relative to the left camera coordinate system).
 
-> _points`_`2D`_`left/right_: 2D pixel positions (e.g. get by **get2DPointsFromImage()** or **get2DPointsFromFile()**)
+  * _points_2D_left/right_: 2D pixel positions (e.g. get by **get2DPointsFromImage()** or **get2DPointsFromFile()**)
 
 ---
 
@@ -230,15 +230,15 @@ The return value is a matrix with 4 rows and one 3D point per column (x,y,z posi
 ```
 	void fit3DPointsToObjectTemplate(const cv::Mat &points_3D, int template_id, cv::Mat &RT, float *avg_deviation);
 ```
-Find the _template`_`id\_th marker object template in the 3D point cloud by edge comparison and minimizing the mean square (edge) error (MSE) as residuum._
+Find the _template_id\_th marker object template in the 3D point cloud by edge comparison and minimizing the mean square (edge) error (MSE) as residuum._
 
-> _points`_`3D_: 3D points of markers positions (e.g. get by **get3DPointsFrom2DPoints()**)
+  * _points_3D_: 3D points of markers positions (e.g. get by **get3DPointsFrom2DPoints()**)
 
-> _template`_`id_: id of the marker object template (saved in the object xml file and read in by **readConfigFiles()**) that should be searched in the 3D point could
+  * _template_id_: id of the marker object template (saved in the object xml file and read in by **readConfigFiles()**) that should be searched in the 3D point could
 
-> _RT_: resulting transformation matrix from the found marker object to the left camera coordinate system (only zero entries if not found)
+  * _RT_: resulting transformation matrix from the found marker object to the left camera coordinate system (only zero entries if not found)
 
-> _avg`_`deviation_: mean square error (scaled by a factor to consider that the more marker correspondences found, the better)
+  * _avg_deviation_: mean square error (scaled by a factor to consider that the more marker correspondences found, the better)
 
 ---
 
@@ -248,11 +248,11 @@ Find the _template`_`id\_th marker object template in the 3D point cloud by edge
 ```
 // Finds the best fit transformation between two 3D point sets _RT_ (minimizes (least-square): point\_set\_1 - RT\*point\_set\_0) and the average deviation between the two fitted sets. Used by **fit3DPointsToObjectTemplate()**.
 
-> _point`_`set`_`0/1_: sets of 3D point that should be fitted/compared
+  * _point_set_0/1_: sets of 3D point that should be fitted/compared
 
-> _RT_: best fit transformation between the two 3D point sets
+  * _RT_: best fit transformation between the two 3D point sets
 
-> _avg`_`deviation_: average deviation between the two fitted sets
+  * _avg_deviation_: average deviation between the two fitted sets
 
 ---
 
@@ -262,7 +262,7 @@ Find the _template`_`id\_th marker object template in the 3D point cloud by edge
 ```
 Outputs the given matrix in matrix-style with some additional information (usually for debugging).
 
-> _M_: matrix that should be outputted
+  * _M_: matrix that should be outputted
 
 ---
 
@@ -280,7 +280,7 @@ Makes the Kalman filter prediction step (should be called right before **kalmanU
 ```
 Returns the Kalman filtered input data.
 
-> _measured`_`3D`_`object`_`points_: input data (e.g. the 3D position (x,y,z) of a tracked marker object) that should be Kalman filtered
+  * _measured_3D_object_points_: input data (e.g. the 3D position (x,y,z) of a tracked marker object) that should be Kalman filtered
 
 ---
 
@@ -290,7 +290,7 @@ Returns the Kalman filtered input data.
 ```
 Reads in the camera parameters (intrinsic, extrinsic, frame rate, ...) from the given xml file. Used by **readConfigFiles()**
 
-> _camera`_`config`_`file`_`name_: xml file to read in the camera data from (e.g. see the "config`_`camera.xml" file from the _tiy`_`server_ example ([Releases](../releases)) and perhaps the [CameraSetUp](CameraSetUp.md) tutorial for more information)
+  * _camera_config_file_name_: xml file to read in the camera data from (e.g. see the "config_camera.xml" file from the _tiy_server_ example ([Releases](../releases)) and perhaps the [CameraSetUp](CameraSetUp.md) tutorial for more information)
 
 ---
 
@@ -300,6 +300,6 @@ Reads in the camera parameters (intrinsic, extrinsic, frame rate, ...) from the 
 ```
 Reads in the marker object data (point matrix) from the given xml file. Used by **readConfigFiles()**
 
-> _object`_`config`_`file`_`name_: xml file to read in the object data from (e.g. see the "config`_`object.xml" file from the _tiy`_`server_ example ([Releases](../releases)) and perhaps the [ObjectSetUp](ObjectSetUp.md) tutorial for more information)
+  * _object_config_file_name_: xml file to read in the object data from (e.g. see the "config_object.xml" file from the _tiy_server_ example ([Releases](../releases)) and perhaps the [ObjectSetUp](ObjectSetUp.md) tutorial for more information)
 
 ---

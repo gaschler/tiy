@@ -161,8 +161,8 @@ Create a subdirectory in the project folder. Open a terminal, navigate to this f
 $ ccmake ..
 ```
 Change the options as you want to
-  * _USE`_`ARAVIS_ _ON_: only when using the Aravis library for Basler camera support
-and set the option _CMAKE`_`BUILD`_`TYPE_ to _Release_.
+  * _USE_ARAVIS=ON_: only when using the Aravis library for Basler camera support
+and set the option _CMAKE\_BUILD\_TYPE_ to _Release_.
 Press the _C_ key a few times and then the _G_ key.
 
 Now _make_ the project
