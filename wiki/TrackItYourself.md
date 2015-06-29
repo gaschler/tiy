@@ -4,9 +4,9 @@ Before installing the hardware, you should start with installing the software an
 Go to [InstallationOnWindows](InstallationOnWindows.md) to see how to install the TIY library **and examples** on Windows, or [InstallationOnLinux](InstallationOnLinux.md) for Linux systems respectively.
 
 # 2. Software tests #
-To get a first impression of the software and check if everything works fine, you should start the _client_ and _server_ program and play with the _config`_`run`_`parameters.xml_ configuration file.
+To get a first impression of the software and check if everything works fine, you should start the _client_ and _server_ program and play with the _config_run_parameters.xml_ configuration file.
 
-On Linux you have to change the _<keyboard`_`device`_`id>_ field in the run configuration file to define your keyboard before starting the _/usr/local/tiy/client_ and _/usr/local/tiy/server_ programs (see therefore _/user/include/tiy/inputDevice/unix/LinuxDevice`_`README.txt_).
+On Linux you have to change the _<keyboard_device_id>_ field in the run configuration file to define your keyboard before starting the _/usr/local/tiy/client_ and _/usr/local/tiy/server_ programs (see therefore _/user/include/tiy/inputDevice/unix/LinuxDevice`_`README.txt_).
 
 On Windows systems you can start _C:/tiy/bin/tiy/client.exe_ and _C:/tiy/bin/tiy/server.exe_ without any preconfigurations.
 
@@ -14,7 +14,7 @@ On Windows systems you can start _C:/tiy/bin/tiy/client.exe_ and _C:/tiy/bin/tiy
 
 Two windows (like that above) with recorded stereo videos should show up and data send from the server to the client. Detected 3D points are marked by a small black circle in the middle of the white shining marker balls and detected objects by a big circle in the middle of the first marker of every object.
 
-The example programs have different features that can be configured by editing the _config`_`run`_`parameters.xml_ file located in the same directory as the programs. As the options are self-explaining or commented, you can start trying some changes.
+The example programs have different features that can be configured by editing the _config_run_parameters.xml_ file located in the same directory as the programs. As the options are self-explaining or commented, you can start trying some changes.
 
 # 3. Camera setup and configuration #
 The next step is to set up the camera system and configure it. All steps are explained in the [CameraSetUp](CameraSetUp.md) section.

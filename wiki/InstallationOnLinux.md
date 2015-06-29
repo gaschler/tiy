@@ -18,12 +18,15 @@ Tested on Ubuntu 11.10, 12.04 and 12.10 all in 64-bit.
 ```
  $ sudo apt-get install libglib2.0-dev libgtk-3-dev intltool libgtk2.0-dev libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev
 ```
-    1. download and extract the newest Aravis library from http://ftp.gnome.org/pub/gnome/sources/aravis/
-    1. go into the extracted directory and _configure_ (see _./configure --help_ for more information):
+
+  1. download and extract the newest Aravis library from http://ftp.gnome.org/pub/gnome/sources/aravis/
+  1. go into the extracted directory and _configure_ (see _./configure --help_ for more information):
+
 ```
  $ ./configure --enable-gst-plugin --enable-viewer --enable-gtk3
 ```
-    1. _make_ and _make install_ the library
+
+  1. _make_ and _make install_ the library
 
 
 # TIY library (and examples) #
@@ -34,9 +37,9 @@ Two options are available for installation:
 
 ## A. Pre-build package ##
 
-The _tiy`_`client_ example can be downloaded and installed without the TIY library and on all PCs in the same network.
+The _tiy_client_ example can be downloaded and installed without the TIY library and on all PCs in the same network.
 
-TIY _.deb_ packages for 64-bit (_amd64_) and 32-bit (_i386_) are available in the [Releases](../releases) section. The TIY library with the _tiy`_`server_ and _tiy`_`client_ example will be installed.
+TIY _.deb_ packages for 64-bit (_amd64_) and 32-bit (_i386_) are available in the [Releases](../releases) section. The TIY library with the _tiy_server_ and _tiy_client_ example will be installed.
 
 For Aravis camera support, please build from source.
 
@@ -45,7 +48,7 @@ For Aravis camera support, please build from source.
 ```
  sudo dpkg -i tiy-0.1.-linux-amd64.deb 
 ```
-> removal by:
+removal by:
 ```
  sudo dpkg -r tiy
 ```
@@ -57,13 +60,13 @@ For Aravis camera support, please build from source.
 ```
 $ ccmake ../src
 ```
-> Press the _C_ key, change the options as you want to
+  1. Press the _C_ key, change the options as you want to
     * _BUILD`_`client_ _ON_: the client example will also be build
     * _BUILD`_`server_ _ON_: the server example will also be build
     * _USE`_`ARAVIS_ _ON_: build with the Aravis camera interface
     * (advanced option:) _BUILD`_`x64_: build in 64-Bit or not
-> and set the option _CMAKE`_`BUILD`_`TYPE_ to _Release_.
-> Press the _C_ key a few times and then the _G_ key.
+    and set the option _CMAKE`_`BUILD`_`TYPE_ to _Release_.
+    Press the _C_ key a few times and then the _G_ key.
   1. _make_ the project:
 ```
 $ make

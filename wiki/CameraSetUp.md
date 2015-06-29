@@ -6,7 +6,7 @@ In the following, a small selection of components is listed.
 If not a very wide setup of more than a few meters is used or not very high precission is needed, cheap "all-in-on" USB infrared webcams can be used such as the [Sabrent WCM-6LNV](http://www.amazon.com/Sabrent-Night-Vision-Webcam-WCM-6LNV/dp/B000BEZVEA/ref=sr_1_1?ie=UTF8&qid=1359396564&sr=8-1&keywords=infrared+webcam) or [Genius ISlim 321R](http://www.geniusnet.com/wSite/ct?xItem=16756&ctNode=160). Then you can skip the following parts until "Set up the cameras for TIY".
 
 ### Gigabit Ethernet cameras (Linux) ###
-GigE cameras working with the used Aravis library on linux can be seen here: https://live.gnome.org/AravisTestedCameras.
+GigE cameras working with the used Aravis library on linux can be seen here: https://wiki.gnome.org/Projects/Aravis/TestedCameras.
 
 They have high resolutions, provide many different settings and have small distortions.
 
@@ -44,14 +44,14 @@ To use the two cameras as one stereo camera, you need both the intrinsic and ext
 
 They can easily get from the MATLAB camera calibration toolbox (http://www.vision.caltech.edu/bouguetj/calib_doc/). The toolbox can also be used with OCTAVE (see http://www.sparetimelabs.com/cameracalib/index.html).
 
-  1. Download and unzip the _tiy`_`calibration_ _.zip_ file from the [Releases](../releases) section
+  1. Download and unzip the _tiy_calibration_ _.zip_ file from the [Releases](../releases) section
   1. Download and unzip the toolbox from http://www.vision.caltech.edu/bouguetj/calib_doc/download/toolbox_calib.zip
-  1. Put all the MAT-files from the extracted toolbox into the extracted _tiy`_`calibration/camera`_`calibration/toolbox\_calib_ folder
-  1. Print out the _tiy`_`calibration/camera`_`calibration/pattern.pdf_ as large as possible and fix it completely flat onto an as inflexible as possible plate.
+  1. Put all the MAT-files from the extracted toolbox into the extracted _tiy_calibration/camera_calibration/toolbox\_calib_ folder
+  1. Print out the _tiy_calibration/camera_calibration/pattern.pdf_ as large as possible and fix it completely flat onto an as inflexible as possible plate.
   1. Make at least 10-15 snapshots of the checkerboard pattern filling the screen in different angles like these http://www.vision.caltech.edu/bouguetj/calib_doc/htmls/calib_example/index.html for the left and then for the right camera.
-> > (Stereo) snapshots can be taken by the TIY _server_ example when activating the _<do`_`log`_`frame>_ option in the _config`_`run`_`parameters.xml_ configuration file and pressing the SPACE key for each snapshot. Perhaps the gain and exposure need to be highly increased to see the chessboard. The files are stored in the _tiy`_`log_ folder in the TIY bin or home directory. Warning: snapshots are overwritten after restarting the _server_ program!
+  1. (Stereo) snapshots can be taken by the TIY _server_ example when activating the _<do_log_frame>_ option in the _config_run_parameters.xml_ configuration file and pressing the SPACE key for each snapshot. Perhaps the gain and exposure need to be highly increased to see the chessboard. The files are stored in the _tiy_log_ folder in the TIY bin or home directory. Warning: snapshots are overwritten after restarting the _server_ program!
   1. Make one stereo snapshot of the checkboard pattern lying preferably flat on a defined reproducible position in the sight of both cameras.
   1. With this image data do the complete intrinsic and extrinsic calibration as explained here http://www.vision.caltech.edu/bouguetj/calib_doc/htmls/example.html.
-> > After each intrinsic calibration, replace the _Calib`_`Results.m_ and _Calib`_`Results.mat_ files in the specific _tiy`_`calibration/camera`_`calibration/left_ or right folder. At the end of the extrinsic calibrations, replace the data in the _Calib`_`Results`_`extrinsic.m_ files.
-  1. Replace the _config`_`camera.xml_ file in the _tiy`_`calibration/camera`_`calibration_ folder with your file from the TIY folder. Run the _make`_`camera`_`parameters.m_ script to write the calibration data into the _config`_`camera.xml_ file and copy the changed configuration file back to the TIY folder.
-> > Important: If you use Octave instead of Matlab, the complete file is overwritten and all camera settings like frame rate, width, height,... are set to default (see _write`_`XML`_`octave`_`camera.m_ in the _fcn_ subfolder). Therefore backup your _config`_`camera.xml_ file before running the script to be able to change these setting back to your choice.
+  1. After each intrinsic calibration, replace the _Calib_Results.m_ and _Calib_Results.mat_ files in the specific _tiy_calibration/camera_calibration/left_ or right folder. At the end of the extrinsic calibrations, replace the data in the _Calib_Results_extrinsic.m_ files.
+  1. Replace the _config_camera.xml_ file in the _tiy_calibration/camera_calibration_ folder with your file from the TIY folder. Run the _make_camera_parameters.m_ script to write the calibration data into the _config_camera.xml_ file and copy the changed configuration file back to the TIY folder.
+  1. Important: If you use Octave instead of Matlab, the complete file is overwritten and all camera settings like frame rate, width, height,... are set to default (see _write_XML_octave_camera.m_ in the _fcn_ subfolder). Therefore backup your _config_camera.xml_ file before running the script to be able to change these setting back to your choice.

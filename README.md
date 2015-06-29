@@ -1,6 +1,6 @@
 ![pics/TIY_screenshot.jpg](pics/TIY_screenshot.jpg)
 
-The TIY library ([Downloads](releases)) enables you to easily build your own 3D marker (object) tracking system.
+The TIY library ([Downloads](../../releases)) enables you to easily build your own 3D marker (object) tracking system.
 
   * **Open-source** (with documentation)
   * **Windows** and **Linux** supported
@@ -21,7 +21,7 @@ After camera calibration ([CameraSetUp](wiki/CameraSetUp.md)), any objects can b
 
 Therefore the system can, for instance, be used in form of a **3D input device**. It is already used in an application of controlling a robot and interacting with a 2D user interface projected on a tracked surface.
 
-Some features of TIY, used in the available _tiy`_`client_ and _tiy`_`server_ examples are:
+Some features of TIY, used in the available tiy_client and tiy_server examples are:
   * OpenCV and Aravis GigE (Linux) camera support
   * Send data over network to multiple other computers
   * Log data, capture image frames and record videos
